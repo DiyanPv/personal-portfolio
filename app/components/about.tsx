@@ -18,7 +18,7 @@ export default function About() {
     {
       icon: <Cloud className="w-8 h-8 text-green-600" />,
       title: "Cloud Native",
-      description: "Experienced with AWS, Azure, and GCP cloud platforms and services",
+      description: "Experienced with AWS, Azure cloud platforms and services",
     },
     {
       icon: <Shield className="w-8 h-8 text-red-600" />,
@@ -35,7 +35,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            With over 5 years of experience in DevOps and cloud engineering, I specialize in building robust, scalable
+            With over 3 years of experience in DevOps and cloud engineering, I specialize in building robust, scalable
             infrastructure solutions that drive business growth and operational excellence.
           </p>
         </div>
@@ -51,10 +51,7 @@ export default function About() {
               I believe in the power of automation, continuous integration, and infrastructure as code to create
               reliable, scalable systems that enable teams to deliver value faster and more efficiently.
             </p>
-            <p className="text-foreground/80 leading-relaxed">
-              When I'm not optimizing CI/CD pipelines or architecting cloud solutions, you'll find me contributing to
-              open-source projects and sharing knowledge with the DevOps community.
-            </p>
+          
           </div>
 
           <div className="relative">

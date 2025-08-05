@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-blue-400">Portfolio</h3>
             <p className="text-gray-400 leading-relaxed">
-              DevOps Engineer & Cloud Architect passionate about building scalable infrastructure and automation
+              DevOps Engineer passionate about building scalable infrastructure and automation
               solutions.
             </p>
           </div>
@@ -54,18 +54,18 @@ export default function Footer() {
                 className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors duration-300"
               >
                 <Mail className="w-5 h-5" />
-                <span>diyan@example.com</span>
+                <span>diyanpetrov61@gmail.com</span>
               </a>
               <div className="flex space-x-4 pt-2">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/DiyanPv"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                   aria-label="GitHub"
                 >
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/diyan-p-b640b120a/"
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                   aria-label="LinkedIn"
                 >
@@ -79,9 +79,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">© 2024 Diyan Yanev. All rights reserved.</p>
-          <p className="text-gray-400 text-sm flex items-center mt-4 md:mt-0">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> and lots of coffee
-          </p>
+
         </div>
       </div>
     </footer>

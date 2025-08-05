@@ -1,66 +1,90 @@
 "use client"
-
+import { ImageLoader } from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
+import { images } from "../assets/Projects/images"
 export default function Projects() {
   const projects = [
     {
-      title: "Multi-Cloud Infrastructure Platform",
+
+
+      title: `Verius`,
+      image: images.verius,
       description:
-        "Built a comprehensive infrastructure platform supporting AWS, Azure, and GCP with unified monitoring, logging, and deployment pipelines. Reduced deployment time by 70% and improved system reliability.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Terraform", "Kubernetes", "Prometheus", "Grafana", "Jenkins"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "Verius is an NFT marketplace demo product. It allows users to send networks to a pre-generated Goerli-only contract and interact with the Giphy API to generate an array of images, which are shown at the bottom.",
+      date: "28.12.2022",
+      github: `https://github.com/DiyanPv/VERIUS-Marketplace`,
+      demo: "https://verius-web3.vercel.app/",
+      tech: ["React", "Kubernetes", "Prometheus", "Grafana", "Jenkins"],
       featured: true,
     },
     {
-      title: "Automated CI/CD Pipeline",
+      title: `Invaders 2.0`,
+      image: images.invaders,
       description:
-        "Designed and implemented a fully automated CI/CD pipeline using GitLab CI and Kubernetes, supporting multiple environments with automated testing, security scanning, and deployment strategies.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["GitLab CI", "Docker", "Kubernetes", "Helm", "SonarQube"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "Invaders 2.0 is my first attempt for a Javascript-native sidescroller 2D game. It utilizes basic HTML instead of canvas and has basic functionalities like shooting, moving targets and tracking score.",
+      date: "14.09.2022",
+      tech: ["Javascript", "HTML", "CSS"],
+      github: `https://github.com/DiyanPv/sidescrolling-game-JS`,
+      demo: "https://invaders-2-0.web.app/",
     },
     {
-      title: "Microservices Monitoring Stack",
+      title: `Food Stop`,
+      image: images.reactfood,
       description:
-        "Implemented comprehensive monitoring and observability for microservices architecture using Prometheus, Grafana, and Jaeger. Achieved 99.9% uptime and reduced MTTR by 60%.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Prometheus", "Grafana", "Jaeger", "ELK Stack", "Kubernetes"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "One of my first React Projects. It utilizes Firebase as a store of order data and stores context data using the React context API instead of Redux. Persistent data in context to be added via requests to firebase at every page open.",
+      date: "02.11.2022",
+      github: `https://github.com/DiyanPv/React-Demos/tree/main/ReactFood`,
+      demo: "https://diyan-test.web.app/",
+      tech: ["React", "Firebase", "React Context"],
+      
     },
     {
-      title: "Infrastructure as Code Framework",
+      title: `Native NFT`,
+      image: images.nativeNFT,
       description:
-        "Created a reusable IaC framework with Terraform modules for rapid deployment of standardized infrastructure across multiple cloud providers with built-in security and compliance.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Terraform", "AWS", "Azure", "Ansible", "Vault"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "Basic landing page website for my NFT Expo (React Native) app. Expo app currently available for Android-only users due to Apple policies.",
+      date: "20.01.2023",
+      sourceCode: `https://github.com/DiyanPv/Native_NFTstore`,
+      github: `https://github.com/DiyanPv/Native_NFTstore`,
+      tech: ["React Native"],
+      demo: "https://native-nft-marketplace.vercel.app/"
+      
     },
     {
-      title: "Container Security Platform",
+      title: `Expense Tracker`,
+      image: images.expenseTracker,
       description:
-        "Developed a comprehensive container security platform with vulnerability scanning, policy enforcement, and runtime protection for Kubernetes clusters.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Kubernetes", "Falco", "OPA", "Trivy", "Istio"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "My second React project. This is simply an expense tracker with basic input fields like date/item/price. As soon as submitted, it logs and displays the filtered array at the bottom for the specific year selected. There is also a 12-month breakdown for each spending year.",
+      date: "15.07.2022",
+      github: `https://github.com/DiyanPv/React-Demos/tree/main/my-app`,
+      demo: "https://expenses-track-react.web.app/",
+      tech: ["React", "TailwindCSS", "HTML"],
+     
     },
     {
-      title: "Disaster Recovery Automation",
+      title: `Krypt`,
+      image: images.krypt,
       description:
-        "Built automated disaster recovery solution with cross-region replication, automated failover, and recovery testing for critical business applications.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["AWS", "Terraform", "Lambda", "CloudFormation", "Route53"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+        "A fetching service that uses the CryptoCompare library to fetch data from different exchanges dynamically. Users can also sort the prices in ascending/descending order and can also fetch data by going to www.url.com/{cryptoPair} and www.url.com/{cryptoPair}/details",
+      date: "27.02.2023",
+      tech: ["HTML", "CSS", "React"],
+      github: `https://github.com/DiyanPv/nexo-fe-task`,
+      demo: "https://nexo-fe-task.vercel.app/",
+     
+    },
+    {
+      title: `The Shoe Stop`,
+      image: images.theshoestop,
+      description:
+        "An eccomerce website in which you can order different types of shoes from which you can sort by price/alphabetical or filter by price/color/gender. You also have a cart and a load more button functionality.",
+      date: "10.08.2023",
+      tech: ["React", "Redux", "Redux Toolkit", "HTML", "CSS"],
+      github: `https://github.com/DiyanPv/TheShoeStop`,
+      demo: "https://the-shoe-stop.vercel.app/",
     },
   ]
 
@@ -81,18 +105,17 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
-                project.featured ? "lg:col-span-2" : ""
-              }`}
+              className={`group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${project.featured ? "lg:col-span-2" : ""
+                }`}
             >
               <div className={`${project.featured ? "md:flex" : ""}`}>
                 <div className={`${project.featured ? "md:w-1/2" : ""}`}>
                   <div className="relative overflow-hidden rounded-t-lg">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <img
+                src={typeof project.image === "string" ? project.image : project.image.src}
+                alt={project.title}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
                 </div>

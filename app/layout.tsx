@@ -7,13 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "John Smith - DevOps Engineer & Cloud Architect",
+  title:"Diyan Yanev - DevOps Engineer",
   description:
     "Professional portfolio showcasing expertise in DevOps, cloud infrastructure, automation, and CI/CD. Experienced with AWS, Kubernetes, Terraform, and modern DevOps practices.",
   keywords: "DevOps, Cloud Engineer, AWS, Kubernetes, Terraform, CI/CD, Infrastructure, Automation",
-  authors: [{ name: "John Smith" }],
+  authors: [{ name: "Diyan Yanev" }],
   openGraph: {
-    title: "John Smith - DevOps Engineer & Cloud Architect",
+    title: "Diyan Yanev - DevOps Engineer",
     description: "Professional portfolio showcasing expertise in DevOps, cloud infrastructure, automation, and CI/CD.",
     type: "website",
   },

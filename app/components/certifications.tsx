@@ -4,63 +4,111 @@ import { Award, Calendar, ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { certificates } from "../assets/Certificates/certificates";
 
 export default function Certifications() {
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect - Professional",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-PSA-12345",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://aws.amazon.com/verification",
-      status: "Active",
+      title: "DevOps Mastery",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: "UC-6666066d-6a5e-47ff-8b5b-1d4b5d65fd9e",
+      image: certificates.udemyDevOps,
+      verifyUrl: "https://www.udemy.com/certificate/UC-6666066d-6a5e-47ff-8b5b-1d4b5d65fd9e/",
+      status: "Completed",
     },
     {
-      title: "Certified Kubernetes Administrator (CKA)",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2023",
-      credentialId: "CKA-67890",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://cncf.io/verification",
-      status: "Active",
+      title: "React Frontend Developer",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: "UC-5d8eff9c-3db1-42e7-a876-3805d9bf5891",
+      image: certificates.udemyReact,
+      verifyUrl: "https://www.udemy.com/certificate/UC-5d8eff9c-3db1-42e7-a876-3805d9bf5891/",
+      status: "Completed",
     },
     {
-      title: "HashiCorp Certified: Terraform Associate",
-      issuer: "HashiCorp",
-      date: "2022",
-      credentialId: "HC-TA-11111",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://hashicorp.com/verification",
-      status: "Active",
+      title: "Node.js Backend Developer",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: "UC-67aacbd8-fb15-4d30-92c8-6c48cfd01a76",
+      image: certificates.udemyNode,
+      verifyUrl: "https://www.udemy.com/certificate/UC-67aacbd8-fb15-4d30-92c8-6c48cfd01a76/",
+      status: "Completed",
     },
     {
-      title: "Microsoft Azure DevOps Engineer Expert",
-      issuer: "Microsoft",
-      date: "2022",
-      credentialId: "MS-AZ400-22222",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://microsoft.com/verification",
-      status: "Active",
+      title: "Full Stack Web Development Bootcamp",
+      issuer: "Udemy",
+      date: "2024",
+      credentialId: "UC-47d18b9b-d8cb-4fed-ac06-2c1b61809184",
+      image: certificates.udemyBootcamp,
+      verifyUrl: "https://www.udemy.com/certificate/UC-47d18b9b-d8cb-4fed-ac06-2c1b61809184/",
+      status: "Completed",
     },
     {
-      title: "Google Cloud Professional Cloud Architect",
-      issuer: "Google Cloud",
+      title: "Programming Basics - JavaScript",
+      issuer: "SoftUni",
       date: "2021",
-      credentialId: "GCP-PCA-33333",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://cloud.google.com/verification",
-      status: "Active",
+      credentialId: "d6c6a2fd",
+      image: certificates.softuniBasics,
+      verifyUrl: "https://softuni.bg/certificates/details/112724/d6c6a2fd",
+      status: "Completed",
     },
     {
-      title: "Docker Certified Associate",
-      issuer: "Docker Inc",
+      title: "Programming Fundamentals - JavaScript",
+      issuer: "SoftUni",
       date: "2021",
-      credentialId: "DCA-44444",
-      image: "/placeholder.svg?height=100&width=100",
-      verifyUrl: "https://docker.com/verification",
-      status: "Active",
+      credentialId: "a54c6c57",
+      image: certificates.softuniFundamentals,
+      verifyUrl: "https://softuni.bg/certificates/details/141482/a54c6c57",
+      status: "Completed",
     },
+    {
+      title: "Containers and Cloud",
+      issuer: "SoftUni",
+      date: "2024",
+      credentialId: "36c30466",
+      image: certificates.diyancontainersandcloud,
+      verifyUrl: "https://softuni.bg/certificates/details/224782/36c30466",
+      status: "Completed",
+    },
+    {
+      title: "Responsive Web Design",
+      issuer: "freeCodeCamp",
+      date: "2024",
+      credentialId: "",
+      image: certificates.diyanresponsiveweb,
+      verifyUrl: "",
+      status: "Completed",
+    },
+    {
+      title: "JavaScript Algorithms and Data Structures",
+      issuer: "freeCodeCamp",
+      date: "2024",
+      credentialId: "",
+      image: certificates.diyanfccalgorithms,
+      verifyUrl: "",
+      status: "Completed",
+    },
+
+    {
+      title: "Certified Kubernetes Administrator - CKA",
+      issuer: "The Linux Foundation",
+      date: "2025",
+      credentialId: "",
+      image: "",
+      verifyUrl: "",
+      status: "In progress",
+    },
+    {
+      title: "Certified Kubernetes Administrator - With Practice Tests",
+      issuer: "Udemy",
+      date: "2025",
+      credentialId: "",
+      image: "",
+      verifyUrl: "",
+      status: "In progress",
+    },
+
   ]
 
   return (
@@ -84,11 +132,12 @@ export default function Certifications() {
             >
               <CardContent className="p-6">
                 <div className="flex items-center justify-center mb-4">
-                  <img
-                    src={cert.image || "/placeholder.svg"}
-                    alt={`${cert.title} badge`}
-                    className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
+                <img
+                src={typeof cert.image === "string" ? cert.image : cert.image.src}
+                alt={cert.title}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+               
                 </div>
 
                 <div className="text-center mb-4">
@@ -137,8 +186,8 @@ export default function Certifications() {
               DevOps and cloud computing landscape.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Badge variant="secondary">Currently Studying: AWS Security Specialty</Badge>
-              <Badge variant="secondary">Next Goal: CKAD Certification</Badge>
+              
+              <Badge variant="secondary">Next Goal: CKA Certification</Badge>
             </div>
           </div>
         </div>

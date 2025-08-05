@@ -6,42 +6,43 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function Experience() {
   const experiences = [
     {
-      title: "Senior DevOps Engineer",
-      company: "TechCorp Solutions",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Devops Engineer",
+      company: "Haemimont AD",
+      location: "Sofia, Bulgaria",
+      period: "2024 - Present",
       description:
-        "Leading infrastructure automation initiatives and cloud migration projects. Architected and implemented CI/CD pipelines serving 50+ microservices with 99.9% uptime.",
+        "Designed and maintained CI/CD pipelines using GitHub/GitLab, automating build, test, and deployment workflows. Leveraged Docker, Ansible, and cloud services (AWS EC2, Lambda, S3) to create scalable, reliable infrastructure. Automated monitoring with Zabbix, Graylog, and AWS CloudWatch, improving uptime and issue detection. Skilled in scripting (Python, Bash, PowerShell) and infrastructure-as-code to streamline releases and enhance system reliability. Created Datadog dashboards for custom monitors. Managed web services with Nginx, Apache, Certbot, and firewall automation. Interviewed candidates for DevOps position. Experienced in PostgreSQL, LDAP, and Linux networking.",
       achievements: [
-        "Reduced deployment time from 2 hours to 15 minutes",
-        "Implemented infrastructure as code reducing manual errors by 90%",
-        "Led cloud migration saving $200K annually in infrastructure costs",
+        "Reduced deployment time from 2 hours to 15 minutes with CI/CD Pipelines",
+        "Implemented DataDog monitoring to sufficiently improve SLA",
+        "Participating in migrating from GlusterFS to CephFS storage solution",
+        "Created IaC for our web servers reducing manual errors"
       ],
     },
     {
-      title: "DevOps Engineer",
-      company: "CloudFirst Inc",
-      location: "Austin, TX",
-      period: "2020 - 2022",
+      title: "Senior CSR",
+      company: "Nexo",
+      location: "Sofia, Bulgaria",
+      period: "2021 - 2024",
       description:
-        "Designed and maintained scalable infrastructure on AWS and Azure. Implemented monitoring and alerting systems using Prometheus and Grafana.",
+        "Proven expertise in Nexo products, user administration, issue resolution, cross-department collaboration, shift management, and mentoring new agents and helping other agents on advanced queries.",
       achievements: [
-        "Built automated disaster recovery system with 15-minute RTO",
-        "Implemented comprehensive monitoring reducing MTTR by 60%",
-        "Mentored junior engineers and established DevOps best practices",
+        "Suggested and helped implement a solution for recovering smart-contract tokens",
+        "Made a procedure to recover ERC-20 tokens easily",
+        "Organized Confluence documentation accross multiple teams",
       ],
     },
     {
-      title: "Systems Administrator",
-      company: "DataFlow Systems",
-      location: "Denver, CO",
-      period: "2019 - 2020",
+      title: "Assistant Manager",
+      company: "Zagora Eco LTD",
+      location: "Stara Zagora, Bulgaria",
+      period: "2013 - 2021",
       description:
-        "Managed on-premises infrastructure and began transition to cloud-native solutions. Automated routine tasks and improved system reliability.",
+        "Poultry farm - I was responsible for almost everything. Managing and helping with organizational tasks. Replacing people on sick leave. Managing microclimate, food portions, drinkable resources, etc. Gained good overall knowledge on construction, machinery, etc.",
       achievements: [
-        "Automated backup processes reducing manual effort by 80%",
-        "Improved system uptime from 95% to 99.5%",
-        "Implemented configuration management with Ansible",
+        "Re-isolation of the roof and walls for better temperature control",
+        "Installation of new cooling system",
+        "Built second building which houses 10,000+ chicken"
       ],
     },
   ]

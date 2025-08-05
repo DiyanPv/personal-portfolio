@@ -7,32 +7,28 @@ export default function Skills() {
   const skillCategories = [
     {
       title: "Cloud Platforms",
-      skills: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Linode"],
+      skills: ["AWS", "Azure"],
       color: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300",
     },
-    {
-      title: "Infrastructure as Code",
-      skills: ["Terraform", "CloudFormation", "Pulumi", "ARM Templates", "CDK"],
-      color: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300",
-    },
+ 
     {
       title: "CI/CD & Automation",
-      skills: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps", "CircleCI"],
+      skills: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps",],
       color: "bg-purple-100 text-purple-800 dark:bg-purple-900/20 dark:text-purple-300",
     },
     {
       title: "Containerization",
-      skills: ["Docker", "Kubernetes", "OpenShift", "Helm", "Docker Compose"],
+      skills: ["Docker", "Kubernetes", "Helm", "Docker Compose"],
       color: "bg-orange-100 text-orange-800 dark:bg-orange-900/20 dark:text-orange-300",
     },
     {
       title: "Monitoring & Logging",
-      skills: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"],
+      skills: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "Zabbix"],
       color: "bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-300",
     },
     {
       title: "Configuration Management",
-      skills: ["Ansible", "Chef", "Puppet", "SaltStack", "Consul"],
+      skills: ["Ansible"],
       color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-300",
     },
   ]
@@ -78,10 +74,10 @@ export default function Skills() {
           <h3 className="text-2xl font-semibold mb-8">Proficiency Levels</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { skill: "AWS", level: 95 },
+              { skill: "AWS", level: 85 },
               { skill: "Kubernetes", level: 90 },
               { skill: "Terraform", level: 92 },
-              { skill: "Docker", level: 88 },
+              { skill: "Docker", level: 94 },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg font-medium mb-2">{item.skill}</div>
