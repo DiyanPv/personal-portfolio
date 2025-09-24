@@ -42,7 +42,7 @@ export default function Experience() {
       achievements: [
         "Re-isolation of the roof and walls for better temperature control",
         "Installation of new cooling system",
-        "Built second building which houses 10,000+ chicken"
+        "Built second building which houses 10,000+ hen"
       ],
     },
   ]
