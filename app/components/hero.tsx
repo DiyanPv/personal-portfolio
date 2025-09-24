@@ -20,15 +20,8 @@ export default function Hero() {
 
     return () => clearInterval(timer)
   }, [])
-  
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/cv/Diyan-Yanev-CV.pdf"; // Relative path to the file in the public/cv folder
-    link.download = "Diyan-Yanev-CV.pdf"; // Suggested filename for download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
+
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
@@ -72,17 +65,14 @@ export default function Hero() {
               <Button
                 size="default"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-blue-500/25"
+                onClick={() => {
+                const aboutSection = document.querySelector("#about")
+                if (aboutSection) {
+                  aboutSection.scrollIntoView({ behavior: "smooth" })
+                }
+              }}
               >
                 View My Work
-              </Button>
-              <Button
-                variant="outline"
-                size="default"
-                onClick={handleDownloadCV}
-                className="px-6 py-2 rounded-full font-medium border-gray-400/50 text-gray-300 hover:bg-white/10 hover:border-gray-300 transition-all duration-300 hover:scale-105 bg-transparent backdrop-blur-sm"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Download CV
               </Button>
             </div>
 
